@@ -3,25 +3,28 @@ return {
   branch = "harpoon2",
   dependencies = { "nvim-lua/plenary.nvim" },
   config = function()
-    local harpoon = require("harpoon")
+    local harpoon = require "harpoon"
 
-    harpoon:setup({
-    settings = {
-        -- This ensures that when you close the Harpoon menu, 
+    harpoon:setup {
+      settings = {
+        -- This ensures that when you close the Harpoon menu,
         -- any changes (deletions, reordering) are saved.
         save_on_toggle = true,
-        
+
         -- Optional: Syncs the list across different Neovim instances
         sync_on_ui_close = false,
-    },
-})
--- FORCE SAVE ON BUFFER LEAVE
-  vim.api.nvim_create_autocmd("BufLeave", {
-    pattern = "harpoon",
-    callback = function()
-      harpoon.ui:save()
-    end,
-  })
+      },
+    }
+    -- FORCE SAVE ON BUFFER LEAVE
+    vim.api.nvim_create_autocmd("BufLeave", {
+      pattern = "harpoon",
+      callback = function()
+        vim.schedule(function()
+          harpoon.ui.save()
+        end)
+      end,
+    })
+
     -- Keymaps
     vim.keymap.set("n", "<leader>a", function()
       harpoon:list():add()

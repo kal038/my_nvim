@@ -11,7 +11,7 @@ map("n", "<leader>-", "<cmd>split<cr>", { desc = "Horizontal split" })
 
 -- Utility
 map("n", ";", ":", { desc = "CMD enter command mode" })
-
+map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 -- Disable arrow keys
 map("n", "<Up>", "<nop>", { desc = "Disable Up" })
 map("n", "<Down>", "<nop>", { desc = "Disable Down" })
