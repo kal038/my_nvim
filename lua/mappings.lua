@@ -9,6 +9,10 @@ local map = vim.keymap.set
 map("n", "<leader>|", "<cmd>vsplit<cr>", { desc = "Vertical split" })
 map("n", "<leader>-", "<cmd>split<cr>", { desc = "Horizontal split" })
 
+-- Buffer
+map("n", "<leader>bd", "<cmd>bdelete<cr>", { desc = "Close buffer" })
+vim.keymap.del("n", "<leader>x")
+
 -- Utility
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
