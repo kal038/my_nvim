@@ -3,10 +3,11 @@ return {
     "mrjones2014/smart-splits.nvim",
     lazy = false,
     config = function()
-      require("smart-splits").setup({
+      require("smart-splits").setup {
         ignored_filetypes = { "NvimTree", "NvimTree_1" },
-      })
-      local ss = require("smart-splits")
+        at_edge = "wrap",
+      }
+      local ss = require "smart-splits"
 
       -- Move between splits
       vim.keymap.set("n", "<C-h>", ss.move_cursor_left)

@@ -5,5 +5,6 @@ require "nvchad.options"
 vim.opt.mousescroll = "ver:0,hor:0"
 vim.opt.relativenumber = true
 vim.opt.updatetime = 250
+vim.opt.laststatus = 0
 -- local o = vim.o
 -- o.cursorlineopt ='both' -- to enable cursorline!
