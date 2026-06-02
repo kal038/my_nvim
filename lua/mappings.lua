@@ -1,6 +1,7 @@
 require "nvchad.mappings"
 
 local map = vim.keymap.set
+local del = vim.keymap.del
 
 -- ==========================================
 -- Normal Mode Mappings
@@ -11,7 +12,7 @@ map("n", "<leader>-", "<cmd>split<cr>", { desc = "Horizontal split" })
 
 -- Buffer
 map("n", "<leader>bd", "<cmd>bdelete<cr>", { desc = "Close buffer" })
-vim.keymap.del("n", "<leader>x")
+del("n", "<leader>x")
 
 -- Utility
 map("n", ";", ":", { desc = "CMD enter command mode" })
@@ -31,8 +32,8 @@ map("i", "<Down>", "<nop>", { desc = "Disable Down" })
 map("i", "<Left>", "<nop>", { desc = "Disable Left" })
 map("i", "<Right>", "<nop>", { desc = "Disable Right" })
 -- The "No-Plugin" Escape
-map("i", "<C-l>", "<Right>")
-map("i", "<C-h>", "<Left>")
+-- map("i", "<C-l>", "<Right>")
+-- map("i", "<C-h>", "<Left>")
 
 -- ==========================================
 -- Visual Mode Mappings
