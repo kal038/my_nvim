@@ -10,10 +10,10 @@ return {
       local ss = require "smart-splits"
 
       -- Move between splits
-      vim.keymap.set("n", "<M-h>", ss.move_cursor_left)
-      vim.keymap.set("n", "<M-l>", ss.move_cursor_right)
-      vim.keymap.set("n", "<M-k>", ss.move_cursor_up)
-      vim.keymap.set("n", "<M-j>", ss.move_cursor_down)
+      vim.keymap.set("n", "<A-h>", ss.move_cursor_left)
+      vim.keymap.set("n", "<A-l>", ss.move_cursor_right)
+      vim.keymap.set("n", "<A-k>", ss.move_cursor_up)
+      vim.keymap.set("n", "<A-j>", ss.move_cursor_down)
 
       -- Resize splits
       vim.keymap.set("n", "<C-M-h>", ss.resize_left)
