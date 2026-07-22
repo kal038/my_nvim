@@ -26,7 +26,7 @@ return {
       current_line_blame_opts = {
         virt_text = true,
         virt_text_pos = "eol", -- End of line
-        delay = 1000, -- Show after half a second of hovering on a line
+        delay = 300, -- Show after half a second of hovering on a line
       },
 
       -- Keymaps specifically for navigating and handling code changes locally
