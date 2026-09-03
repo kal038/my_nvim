@@ -2,7 +2,7 @@ local on_attach = require("nvchad.configs.lspconfig").on_attach
 local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
-local servers = { "html", "cssls", "lua_ls" }
+local servers = { "html", "cssls", "lua_ls", "postgres_lsp" }
 
 -- 1. Default servers using Neovim 0.11 API
 for _, lsp in ipairs(servers) do

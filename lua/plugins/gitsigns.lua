@@ -22,7 +22,7 @@ return {
       },
       auto_attach = true,
       attach_to_untracked = false,
-      current_line_blame = true, -- Optional: Shows inline VS Code-style git blame text at end of line
+      current_line_blame = false, -- Optional: Shows inline VS Code-style git blame text at end of line
       current_line_blame_opts = {
         virt_text = true,
         virt_text_pos = "eol", -- End of line
