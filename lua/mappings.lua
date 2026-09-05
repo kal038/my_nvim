@@ -10,8 +10,17 @@ local del = vim.keymap.del
 map("n", "<leader>|", "<cmd>vsplit<cr>", { desc = "Vertical split" })
 map("n", "<leader>-", "<cmd>split<cr>", { desc = "Horizontal split" })
 
--- Buffer
+-- Buffer Deletions
 map("n", "<leader>bd", "<cmd>bdelete<cr>", { desc = "Close buffer" })
+
+-- Fast close for the current buffer. Overrides Vim's rarely used Ex-mode key.
+map("n", "Q", "<cmd>bdelete<cr>", { desc = "Close buffer" })
+
+-- Close every buffer in the current tab. Modified buffers still prompt before closing.
+map("n", "<leader>bD", function()
+  require("nvchad.tabufline").closeAllBufs()
+end, { desc = "Close all buffers" })
+
 del("n", "<leader>x")
 
 -- Utility
